@@ -26,6 +26,10 @@ app.use(
     optionsSuccessStatus: 204,
   }),
 );
+app.use((req, res, next) => {
+  res.set('Access-Control-Allow-Origin', 'http://localhost:8080');
+  next();
+});
 
 app.use('/api', router);
 
