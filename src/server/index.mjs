@@ -27,7 +27,7 @@ app.use(
   }),
 );
 app.use((req, res, next) => {
-  res.set('Access-Control-Allow-Origin', 'http://localhost:8080');
+  res.set('Access-Control-Allow-Origin', 'https://nazarkharkevych.github.io/');
   next();
 });
 
