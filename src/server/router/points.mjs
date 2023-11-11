@@ -15,7 +15,7 @@ const validator = createValidator();
 router.post('/', validator.body(createPointSchema), createPoint);
 router.get('/', getAllPoints);
 router.get('/:id', validator.params(getPointSchema), getPoint);
-router.patch('/', validator.body(updatePointSchema), updatePoint);
+router.post('/update', validator.body(updatePointSchema), updatePoint);
 router.delete('/:id', validator.params(deletePointSchema), deletePoint);
 
 export default router;
