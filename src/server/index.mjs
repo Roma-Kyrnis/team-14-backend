@@ -18,14 +18,7 @@ app.use(
   morgan(config.envs.NODE_ENV === config.constants.NODE_ENVS.DEVELOPMENT ? 'dev' : 'combined'),
 );
 app.use(helmet());
-app.use(
-  cors({
-    origin: '*',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    preflightContinue: false,
-    optionsSuccessStatus: 204,
-  }),
-);
+app.use(cors());
 
 app.use('/api', router);
 
