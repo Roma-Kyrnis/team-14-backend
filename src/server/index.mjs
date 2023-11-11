@@ -26,10 +26,6 @@ app.use(
     optionsSuccessStatus: 204,
   }),
 );
-app.use((req, res, next) => {
-  res.set('Access-Control-Allow-Origin', 'https://nazarkharkevych.github.io/');
-  next();
-});
 
 app.use('/api', router);
 
