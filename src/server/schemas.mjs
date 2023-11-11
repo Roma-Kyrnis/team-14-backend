@@ -4,12 +4,12 @@ export const createPointSchema = Joi.object({
   name: Joi.string().required(),
   address: Joi.string().required(),
   hours: Joi.string(),
-  features: Joi.array().items(Joi.string()).required(),
+  features: Joi.array().items(Joi.string()).default([]),
   source: Joi.string().required(),
   icon: Joi.string().required(),
   coordinates: Joi.array().items(Joi.number().required()).length(2).required(),
 
-  description: Joi.string(),
+  description: Joi.string().default('').empty(''),
 });
 
 export const getPointSchema = Joi.object({
