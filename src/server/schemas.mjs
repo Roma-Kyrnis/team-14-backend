@@ -25,7 +25,7 @@ export const updatePointSchema = Joi.object({
   hours: Joi.string(),
   features: Joi.array().items(Joi.string().required()),
   source: Joi.string(),
-  icon: Joi.string().required(),
+  icon: Joi.string(),
   coordinates: Joi.array().items(Joi.number().required()).length(2),
 });
 
