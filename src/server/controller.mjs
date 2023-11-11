@@ -7,8 +7,8 @@ import {
 } from '../db/points.mjs';
 
 export const createPoint = async (req, res) => {
-  const { name, address, hours, features, source, coordinates } = req.body;
-  const point = { name, address, hours, features, source, coordinates };
+  const { name, address, hours, features, source, icon, coordinates } = req.body;
+  const point = { name, address, hours, features, source, icon, coordinates };
   const createdPoint = await dbCreatePoint(point);
 
   res.status(201).send({ id: createdPoint });
@@ -28,7 +28,7 @@ export const getAllPoints = async (req, res) => {
 };
 
 export const updatePoint = async (req, res) => {
-  const { id, name, address, hours, features, source, coordinates } = req.body;
+  const { id, name, address, hours, features, source, icon, coordinates } = req.body;
   const point = { id };
 
   if (name) point.name = name;
@@ -36,6 +36,7 @@ export const updatePoint = async (req, res) => {
   if (hours) point.hours = hours;
   if (features) point.features = features;
   if (source) point.source = source;
+  if (icon) point.icon = icon;
   if (coordinates) point.coordinates = coordinates;
 
   await dbUpdatePoint(point);
