@@ -1,0 +1,8 @@
+# Secrets
+.env
+
+# Modules (can be installed using package.json)
+node_modules
+
+# Personal workspace files for VSCode
+.vscode

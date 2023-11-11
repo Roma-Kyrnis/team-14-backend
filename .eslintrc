@@ -1,0 +1,33 @@
+{
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "extends": [
+    "airbnb-base",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "root": true,
+  "rules": {
+    "no-console": "warn",
+    "prettier/prettier": "error",
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    "no-return-await": "off",
+    "no-restricted-syntax": "off",
+    "sort-imports": "off",
+    "import/extensions": [
+      "always",
+      {
+        "mjs": "never"
+      }
+    ]
+  }
+}
